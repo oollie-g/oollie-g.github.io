@@ -41,7 +41,7 @@
     
       
         
-          <link href="https://github.com/OllieeeChap" rel="me">
+          <link href="https://github.com/oollie-g" rel="me">
         
       
     
@@ -1545,8 +1545,8 @@
 
 <script
   type="text/javascript"
-  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
-  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
   data-blur-id="menu-blur"></script>
 
     
@@ -1833,8 +1833,8 @@
     alt="Airplay iPhone"
     width="941"
     height="602"
-    src="/projects/z906/airplay_iphone_hu_3684c1a2a5b2f1c4.jpeg"
-    srcset="/projects/z906/airplay_iphone_hu_3684c1a2a5b2f1c4.jpeg 800w, /projects/z906/airplay_iphone.jpeg 1280w"
+    src="/projects/z906/airplay_iphone_hu_515de3e514dc05d2.jpeg"
+    srcset="/projects/z906/airplay_iphone_hu_515de3e514dc05d2.jpeg 800w, /projects/z906/airplay_iphone.jpeg 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/airplay_iphone.jpeg"></figure>
 <p>Unfortunately, RasPi&rsquo;s built-in audio jack output sounds quite awful. To make things better, just add an external DAC such as the PiFi DAC+ v2.0:</p>
@@ -1846,8 +1846,8 @@
     alt="Airplay iPhone"
     width="1192"
     height="1078"
-    src="/projects/z906/pifi_dac_hu_615ed278fb087f46.png"
-    srcset="/projects/z906/pifi_dac_hu_615ed278fb087f46.png 800w, /projects/z906/pifi_dac.png 1280w"
+    src="/projects/z906/pifi_dac_hu_7042bc08f715bdea.png"
+    srcset="/projects/z906/pifi_dac_hu_7042bc08f715bdea.png 800w, /projects/z906/pifi_dac.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/pifi_dac.png"></figure>
 
@@ -1863,7 +1863,7 @@
 <p>Raspbian (RaspberryPi Linux based distro) uses <em>alsa</em> as audio driver. Using an external DAC requires some configuration to use it as the default output. First, connect via SSH and check if your DAC is correctly detected:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">$</span> cat /proc/asound/cards
 </span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go"> 0 [Headphones     ]: bcm2835_headpho - bcm2835 Headphones
+</span></span></span><span class="line"><span class="cl"><span class="go"> 0 [Headphones     ]: bcm2835_headpho - bcm2835 Headphones
 </span></span></span><span class="line"><span class="cl"><span class="go">                      bcm2835 Headphones
 </span></span></span><span class="line"><span class="cl"><span class="go"> 1 [sndrpihifiberry]: HifiberryDacp - snd_rpi_hifiberry_dacplus
 </span></span></span><span class="line"><span class="cl"><span class="go">                      snd_rpi_hifiberry_dacplus
@@ -1873,7 +1873,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="gp">#</span> touch /etc/asound.conf
 </span></span><span class="line"><span class="cl"><span class="gp">#</span> nano /etc/asound.conf
 </span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">    defaults.pcm.card 1
+</span></span></span><span class="line"><span class="cl"><span class="go">    defaults.pcm.card 1
 </span></span></span><span class="line"><span class="cl"><span class="go">    defaults.ctl.card 1
 </span></span></span></code></pre></div><p>then restart your Pi. Try using Airplay, it should play sound on DAC&rsquo;s output.</p>
 
@@ -1906,8 +1906,8 @@
 </span></span><span class="line"><span class="cl"><span class="gp">$</span> <span class="nb">cd</span> shairport-sync
 </span></span><span class="line"><span class="cl"><span class="gp">$</span> autoreconf -fi
 </span></span><span class="line"><span class="cl"><span class="gp">$</span> ./configure --sysconfdir<span class="o">=</span>/etc --with-alsa <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span><span class="go">    --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-airplay-2 --with-mqtt-client
-</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="gp">$</span> make
+</span></span></span><span class="line"><span class="cl"><span class="go">    --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-airplay-2 --with-mqtt-client
+</span></span></span><span class="line"><span class="cl"><span class="gp">$</span> make
 </span></span><span class="line"><span class="cl"><span class="gp">#</span> make install
 </span></span></code></pre></div><p>The flag <code>--with-mqtt-client</code> should use the auto-discovery method and appears automatically in your Home Assistant devices under MQTT.</p>
 
@@ -1939,8 +1939,8 @@
     alt="ESP32 Flow"
     width="1116"
     height="546"
-    src="/projects/z906/z906_mqtt_hu_5067d98438f91db8.png"
-    srcset="/projects/z906/z906_mqtt_hu_5067d98438f91db8.png 800w, /projects/z906/z906_mqtt.png 1280w"
+    src="/projects/z906/z906_mqtt_hu_d6c03d27bb0809a5.png"
+    srcset="/projects/z906/z906_mqtt_hu_d6c03d27bb0809a5.png 800w, /projects/z906/z906_mqtt.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/z906_mqtt.png"></figure>
 <p>Nevertheless, there isn&rsquo;t any functionality to turn it on/off, since that requires some soldering.</p>
@@ -1970,10 +1970,10 @@
 <p>Next, we need to handle MQTT message to control GPIO on our ESP32. To do this, I modified <code>z906_onmqttmessage.cpp</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">Z906</span><span class="o">::</span><span class="n">_OnMQTTMessage_SetPower_Button</span><span class="p">(</span><span class="n">MQTT</span><span class="o">*</span> <span class="n">mqttClient</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">message</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">//Power Button Broker Message Handle
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&#34;Power Button Pressed&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&#34;Power Button Pressed&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">//Trigger the Power Button
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">POWER_PIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">POWER_PIN</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="n">delay</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="n">digitalWrite</span><span class="p">(</span><span class="n">POWER_PIN</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1986,8 +1986,8 @@
     alt="Optocoupler diagram"
     width="1203"
     height="393"
-    src="/projects/z906/optocoupler_hu_afbaa7121b8cba86.png"
-    srcset="/projects/z906/optocoupler_hu_afbaa7121b8cba86.png 800w, /projects/z906/optocoupler.png 1280w"
+    src="/projects/z906/optocoupler_hu_c33ca4bfcbd6cd11.png"
+    srcset="/projects/z906/optocoupler_hu_c33ca4bfcbd6cd11.png 800w, /projects/z906/optocoupler.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/optocoupler.png"></figure>
 <p>You can look at the project on the GitHub repo:
@@ -2063,8 +2063,8 @@
     alt="Final ESP setup"
     width="1024"
     height="645"
-    src="/projects/z906/esp_final_hu_84e96ad85f03393a.jpeg"
-    srcset="/projects/z906/esp_final_hu_84e96ad85f03393a.jpeg 800w, /projects/z906/esp_final.jpeg 1280w"
+    src="/projects/z906/esp_final_hu_8621ccd6c998a203.jpeg"
+    srcset="/projects/z906/esp_final_hu_8621ccd6c998a203.jpeg 800w, /projects/z906/esp_final.jpeg 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/esp_final.jpeg"></figure>
 
@@ -2088,8 +2088,8 @@
     alt="HA automation"
     width="1788"
     height="873"
-    src="/projects/z906/automation_on_hu_61ee5ff4dd5a8d68.png"
-    srcset="/projects/z906/automation_on_hu_61ee5ff4dd5a8d68.png 800w, /projects/z906/automation_on_hu_220cfa399ac3f859.png 1280w"
+    src="/projects/z906/automation_on_hu_48b6d0eda448d019.png"
+    srcset="/projects/z906/automation_on_hu_48b6d0eda448d019.png 800w, /projects/z906/automation_on_hu_821d2917b749a996.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/automation_on.png"></figure>
 
@@ -2115,8 +2115,8 @@
     alt="Airplay automation"
     width="960"
     height="540"
-    src="/projects/z906/airplay_on_hu_32ae3e828eaab670.gif"
-    srcset="/projects/z906/airplay_on_hu_32ae3e828eaab670.gif 800w, /projects/z906/airplay_on.gif 1280w"
+    src="/projects/z906/airplay_on_hu_2beec8a6623ceadd.gif"
+    srcset="/projects/z906/airplay_on_hu_2beec8a6623ceadd.gif 800w, /projects/z906/airplay_on.gif 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/projects/z906/airplay_on.gif"></figure>
 
